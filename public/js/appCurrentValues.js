@@ -7,6 +7,8 @@ lmeForm.addEventListener('submit',(event)=>{
     var checked = document.querySelectorAll('input:checked');
     messageOne.textContent = '';
 if (checked.length === 0) {
+    // there are no checked checkboxes
+    alert('no checkboxes checked');
     return;
 } else {
     // there are some checked checkboxes
