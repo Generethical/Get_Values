@@ -153,13 +153,11 @@ app.get('/findBynDouble',(req,res)=>{
 
 app.get('/findCurrent',(req,res)=>{
     if(!req.query.value){
-        alert('Hello')
         res.send({
             error:"You must enter a value"
         })
     }
     getResult(req.query.value,(obj)=>{
-        alert('Heleeefsdlo')
         res.send({
             values:obj,
         })
