@@ -37,7 +37,8 @@ function getID(value,array){
 
 function getResult(basic,callback){
   const scrape = async () => {
-    const browser = await puppeteer.launch({
+    try{    
+      const browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox','--disable-setuid-sandbox']
     })
@@ -46,7 +47,14 @@ function getResult(basic,callback){
     const html = await page.content();
     const $ = cheerio.load(html);
     let txt = $('#table_history').text()
-    txt = txt.substring(21);
+    txt = txt.substring(21);}
+    catch (err) {
+      console.log(err);
+      response.status(500).send('ERROR: ' + err)
+    }
+    finally{
+      await browser.close()
+    }
     await browser.close();
     return txt;
 }
