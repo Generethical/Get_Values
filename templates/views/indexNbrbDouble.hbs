@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Get average course of RUB</title>
+        {{!-- <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css"> --}}
+    </head>
+    <body>
+        <div class="main-content">
+        {{>header}}
+            <p>Use this page to get value of belorussian rouble in range</p>
+            <form>
+                <p>Choose currency:
+                <select>
+                <option>Доллар США</option>
+                <option>Гривна</option>
+                <option>Фунт стерлингов</option>
+                <option>Евро</option>
+                <option>Российский рубль</option>
+                <option>Китайский юань</option>
+                <option>Швейцарский франк</option>
+                </select>
+                <br>
+                {{!-- <p>Choose date:
+                <input type="date">
+                <br> --}}
+                <p>Choose range of dates:
+                <br>
+                <input id="calendar1" type="date">
+                <br>
+                <input id="calendar2"type="date">
+                <button>Search</button>
+            </form>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+            <p id="message-3"></p>
+            <p id="message-4"></p>
+        </div>
+        {{>footer}}
+    <script src="/js/appNbrbDouble.js"></script>
+</body>
+</html>

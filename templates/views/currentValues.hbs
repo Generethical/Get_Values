@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Get current values</title>
+        {{!-- <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css"> --}}
+    </head>
+    <body>
+        <div class="main-content">
+        {{>header}}
+            <p>Use this page to get neccesary values</p>
+            <form>
+                <input type="checkbox" name="Aluminum">Aluminum
+                <br>
+                <input type="checkbox" name="Copper">Copper
+                <br>
+                <input type="checkbox" name="USD/RUB">USD/RUB
+                <br>
+                <input type="checkbox" name="EUR/RUB">EUR/RUB
+                <br>
+                <input type="checkbox" name="USD/BYN">USD/BYN
+                <br>
+                <input type="checkbox" name="GBP/RUB">GBP/RUB
+                <br>
+                <input type="checkbox" name="EUR/USD">EUR/USD
+                <br>
+                <input type="checkbox" name="UAH/RUB">UAH/RUB
+                <br>
+                <button>Search</button>
+            </form>
+            <p id="message-1"></p>
+
+        </div>
+        {{>footer}}
+    <script src="/js/appCurrentValues.js"></script>
+</body>
+</html>

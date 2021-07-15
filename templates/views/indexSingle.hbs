@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>LME-Information</title>
+        {{!-- <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css"> --}}
+    </head>
+    <body>
+        <div class="main-content">
+        {{>header}}
+            <p>Use this site to get value of metal on single date</p>
+            <form>
+                <p>Choose metal:
+                <select>
+                    <option>Cu</option>
+                    <option>Al</option>
+                    <option>Sn</option>
+                    <option>Pb</option>
+                    <option>Zn</option>
+                    <option>Ni</option>
+                </select>
+                <br>
+                {{!-- <p>Choose date:
+                <input type="date">
+                <br> --}}
+                <p>Choose date:
+                <input type="date">
+                <button>Search</button>
+            </form>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+            <p id="message-3"></p>
+        </div>
+        {{>footer}}
+    <script src="/js/appSingle.js"></script>
+</body>
+</html>
