@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio')
 const basics = require('../../currecyBasics/basicCurrent')
-
+let scrape;
 
 function createArrayOfValues(txt){
   let array = []
@@ -10,7 +10,7 @@ function createArrayOfValues(txt){
   index = txt.indexOf(":")
   let resultTxt = txt.substring(0,index+3);
   const data = resultTxt.substring(resultTxt.length-16)
-  
+
   const course1 = resultTxt.substring(0,(resultTxt.length-data.length)/4);
   resultTxt = resultTxt.substring((resultTxt.length-data.length)/4)
   const course2 = resultTxt.substring(0,(resultTxt.length-data.length)/3);
@@ -36,34 +36,24 @@ function getID(value,array){
 }
 
 function getResult(basic,callback){
-  const scrape = async () => {
-    try{    
-      const browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox','--disable-setuid-sandbox']
-    })
+  scrape = async () => {
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(getID(basic,basics));
     const html = await page.content();
     const $ = cheerio.load(html);
     let txt = $('#table_history').text()
-    txt = txt.substring(21);}
-    catch (err) {
-      console.log(err);
-      response.status(500).send('ERROR: ' + err)
-    }
-    finally{
-      await browser.close()
-    }
+    txt = txt.substring(21);
     await browser.close();
     return txt;
 }
 scrape().then((value) => {
   const array = createArrayOfValues(value)[0];
   const obj = [`type:${basic}`,`open:${array[0]}`,`high:${array[1]}`,`low:${array[2]}`,`close:${array[3]}`,`time:${array[4]}`,'\n']
+
   return callback(obj)
 })
 }
 
 
-module.exports = getResult
+module.exports = getResult 
