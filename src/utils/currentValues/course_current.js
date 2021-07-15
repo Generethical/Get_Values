@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio')
 const basics = require('../../currecyBasics/basicCurrent')
-let scrape;
+
 
 function createArrayOfValues(txt){
   let array = []
@@ -36,7 +36,7 @@ function getID(value,array){
 }
 
 function getResult(basic,callback){
-  scrape = async () => {
+  const scrape = async () => {
     const browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox','--disable-setuid-sandbox']
