@@ -47,7 +47,7 @@ function getResult(basic,callback){
     const $ = cheerio.load(html);
     let txt = $('#table_history').text()
     txt = txt.substring(21);
-    browser.close();
+    await browser.close();
     return txt;
 }
 scrape().then((value) => {
