@@ -25,37 +25,37 @@ app.use(express.static(directory))
 
 app.get('/indexSingle',(req,res)=>{
     res.render('indexSingle',{
-        name:'Artem Sturchenko'
+        name:'Артём Стурченко'
     })
 })
 
 app.get('/indexDouble',(req,res)=>{
     res.render('indexDouble',{
-        name:'Artem Sturchenko'
+        name:'Артём Стурченко'
     })
 })
 
 app.get('/indexCbrDouble',(req,res)=>{
     res.render('indexCbrDouble',{
-        name:'Artem Sturchenko'
+        name:'Артём Стурченко'
     })
 })
 
 app.get('/indexNbrbSingle',(req,res)=>{
     res.render('indexNbrbSingle',{
-        name:'Artem Sturchenko'
+        name:'Артём Стурченко'
     })
 })
 
 app.get('/indexNbrbDouble',(req,res)=>{
     res.render('indexNbrbDouble',{
-        name:'Artem Sturchenko'
+        name:'Артём Стурченко'
     })
 })
 
 app.get('/currentValues',(req,res)=>{
     res.render('currentValues',{
-        name:'Artem Sturchenko'
+        name:'Артём Стурченко'
     })
 })
 
@@ -166,8 +166,8 @@ app.get('/findCurrent',(req,res)=>{
 
 app.get('*',(req,res)=>{
     res.render('404',{
-        title:'Use links:',
-        name:'Artem Sturchenko',
+        title:'Используйте следующие ссылки для получения необходимой информации:',
+        name:'Артём Стурченко',
     })
 })
 

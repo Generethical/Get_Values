@@ -80,9 +80,9 @@ function findUsingDataMiddle(date1,date2,callback){
     result_LME_3_month = (sum_LME_3_month/values_LME_3_month.length).toFixed(2);
   
       const obj = {
-          date:date1+" - "+date2,
-          LME_Cash_Settlement:result_Cash_Settlement,
-          LME_3_month:result_LME_3_month
+          date:"Диапазон дат: "+date1+" - "+date2,
+          LME_Cash_Settlement:"Расчет по торгам LME: "+result_Cash_Settlement,
+          LME_3_month:"Стоимость за 3 месяца: "+result_LME_3_month
       }
       return obj;
   }

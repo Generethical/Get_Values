@@ -30,16 +30,16 @@ const getTxtValueCBRdouble = ((currency,date1,date2)=>{
     })
     let arrayToPrint = [];
     finalArray.forEach(item=>{
-      arrayToPrint.unshift(item.date+"\t"+item.value)
+      arrayToPrint.unshift(item.date+" : "+item.value)
     })
     let sum = 0;
     finalArray.forEach(item=>{
         sum = sum + item.value
     })
     const obj = {
-      text:"The average course in range "+date1+" - "+date2,
-      currency_Name:'Currency - '+currencyName,
-      value:`Average course: ${(sum/finalArray.length).toFixed(3)}`,
+      text:"Стоимость в диапазоне "+date1+" - "+date2,  
+      currency_Name:'Валюта - '+currencyName,
+      value:`Средний курс: ${(sum/finalArray.length).toFixed(3)}`,
       arrayOfValues:arrayToPrint
       }
     return obj;

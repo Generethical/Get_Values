@@ -52,9 +52,9 @@ const getId = function(array,currency){
 
   const resultArrayNbrbSinge = function(jsonValue){
         return{
-            date:parseData(jsonValue.Date),
-            name:jsonValue.Cur_Abbreviation,
-            value:jsonValue.Cur_OfficialRate
+            date:"Выбранная дата: " + parseData(jsonValue.Date),
+            name:"Выбранная валюта: "+jsonValue.Cur_Abbreviation,
+            value:"Стоимость валюты: "+jsonValue.Cur_OfficialRate
         }
   }
 
@@ -66,15 +66,15 @@ const getId = function(array,currency){
     jsonValue.forEach(item=>{
       arrayOfCourses.unshift(item.Cur_OfficialRate)
       id = item.Cur_ID;
-      arrayOfValues.unshift(parseData(item.Date)+" "+item.Cur_OfficialRate)
+      arrayOfValues.unshift(parseData(item.Date)+":"+item.Cur_OfficialRate)
     })
     arrayOfCourses.forEach(item=>{
       Value = Value + item;
     })
      return{
-        date:"The average course in range "+date1+" - "+date2,
+        date:"Стоимость в диапазоне: "+date1+" - "+date2,
         name: getName(basics,id),
-        value:`Average course: ${(Value/arrayOfCourses.length).toFixed(3)}`,
+        value:`Средний курс: ${(Value/arrayOfCourses.length).toFixed(3)}`,
         values: arrayOfValues
     }
 }
