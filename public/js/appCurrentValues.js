@@ -13,6 +13,7 @@ if (checked.length === 0) {
 } else {
     // there are some checked checkboxes
     checked.forEach(item=>{
+        alert('Hi')
         fetch('/findCurrent?value='+item.name).then((response)=>{ 
         response.json().then((data)=>{
                 messageOne.setAttribute('style', 'white-space: pre;');
