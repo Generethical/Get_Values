@@ -166,9 +166,8 @@ app.get('/findCurrent',(req,res)=>{
 
 app.get('*',(req,res)=>{
     res.render('404',{
-        title:'404',
+        title:'Use links:',
         name:'Artem Sturchenko',
-        errorMessage:'Page is not found'
     })
 })
 
