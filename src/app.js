@@ -158,6 +158,7 @@ app.get('/findCurrent',(req,res)=>{
         })
     }
     getResult(req.query.value,(obj)=>{
+        alert('Hello')
         res.send({
             values:obj,
         })
