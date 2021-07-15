@@ -1,16 +1,17 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <title>LME-Information</title>
+        <title>Стоимость металлов на конретную дату</title>
         {{!-- <link rel="icon" href="/img/weather.png">
         <link rel="stylesheet" href="/css/styles.css"> --}}
     </head>
     <body>
         <div class="main-content">
+        <p>Используйте эту страницу для получения информации о стоимости металлов на конкретную дату</p>
         {{>header}}
-            <p>Use this site to get value of metal on single date</p>
             <form>
-                <p>Choose metal:
+                <p>Выберите металл:
+                <br>
                 <select>
                     <option>Cu</option>
                     <option>Al</option>
@@ -23,9 +24,11 @@
                 {{!-- <p>Choose date:
                 <input type="date">
                 <br> --}}
-                <p>Choose date:
+                <p>Выберите дату:
+                <br>
                 <input type="date">
-                <button>Search</button>
+                <br>
+                <button>Поиск</button>
             </form>
             <p id="message-1"></p>
             <p id="message-2"></p>

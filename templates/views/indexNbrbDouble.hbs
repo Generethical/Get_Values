@@ -1,16 +1,17 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <title>Get average course of RUB</title>
+        <title>Стоимость валют НБРБ</title>
         {{!-- <link rel="icon" href="/img/weather.png">
         <link rel="stylesheet" href="/css/styles.css"> --}}
     </head>
     <body>
         <div class="main-content">
+        <p>Используйте данную страницу для получения стоимости белорусского рубля в диапазоне дат</p>
         {{>header}}
-            <p>Use this page to get value of belorussian rouble in range</p>
             <form>
-                <p>Choose currency:
+                <p>Выберите валюту:
+                <br>
                 <select>
                 <option>Доллар США</option>
                 <option>Гривна</option>
@@ -24,12 +25,13 @@
                 {{!-- <p>Choose date:
                 <input type="date">
                 <br> --}}
-                <p>Choose range of dates:
+                <p>Выберите диапазон дат:
                 <br>
                 <input id="calendar1" type="date">
                 <br>
                 <input id="calendar2"type="date">
-                <button>Search</button>
+                <br>
+                <button>Поиск</button>
             </form>
             <p id="message-1"></p>
             <p id="message-2"></p>

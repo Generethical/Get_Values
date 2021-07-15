@@ -14,9 +14,9 @@ lmeForm.addEventListener('submit',(event)=>{
         messageThree.textContent = '';
         fetch('/findSingle?metal='+value+'&date='+value2).then((response)=>{ 
         response.json().then((data)=>{
-                messageOne.textContent = data.date;
-                messageTwo.textContent = data.LME_Cash_Settlement;
-                messageThree.textContent = data.LME_3_month;
+                messageOne.textContent = "Дата: "+data.date;
+                messageTwo.textContent = "Расчет по торгам LME: "+data.LME_Cash_Settlement;
+                messageThree.textContent = "Стоимость за 3 месяца: "+data.LME_3_month;
                 })
         })
 })

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <title>Get average course of RUB</title>
+        <title>Стоимость валют ЦБ РФ</title>
         {{!-- <link rel="icon" href="/img/weather.png">
         <link rel="stylesheet" href="/css/styles.css"> --}}
     </head>
     <body>
         <div class="main-content">
+        <p>Используйте эту страницу для получения стоиомсти валют ЦБРФ</p>
         {{>header}}
-            <p>Use this page to get value of russian rouble to another currencies</p>
             <form>
-                <p>Choose currency:
+                <p>Выберите валюту:
+                <br>
                 <select>
                 <option>Австралийский доллар</option>
                 <option>Австрийский шиллинг</option>
@@ -78,12 +79,13 @@
                 {{!-- <p>Choose date:
                 <input type="date">
                 <br> --}}
-                <p>Choose range of dates:
+                <p>Выберите диапазон дат:
                 <br>
                 <input id="calendar1" type="date">
                 <br>
                 <input id="calendar2"type="date">
-                <button>Search</button>
+                <br>
+                <button>Поиск</button>
             </form>
             <p id="message-1"></p>
             <p id="message-2"></p>

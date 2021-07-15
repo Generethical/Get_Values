@@ -1,16 +1,17 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <title>LME-Information</title>
+        <title>Стоимость металлов в диапазоне значений</title>
         {{!-- <link rel="icon" href="/img/weather.png">
         <link rel="stylesheet" href="/css/styles.css"> --}}
     </head>
     <body>
         <div class="main-content">
+        <p>Используйте эту страницу для получения информации о стоимости металлов в диапазоне значений</p>
         {{>header}}
-            <p>Use this page to get value of metal on range of dates</p>
             <form>
-                <p>Choose metal:
+                <p>Выберите металл:
+                <br>
                 <select>
                     <option>Cu</option>
                     <option>Al</option>
@@ -23,12 +24,13 @@
                 {{!-- <p>Choose date:
                 <input type="date">
                 <br> --}}
-                <p>Choose range of dates:
+                <p>Выберите диапазон дат:
                 <br>
                 <input id="calendar1" type="date">
                 <br>
                 <input id="calendar2"type="date">
-                <button>Search</button>
+                <br>
+                <button>Поиск</button>
             </form>
             <p id="message-1"></p>
             <p id="message-2"></p>
